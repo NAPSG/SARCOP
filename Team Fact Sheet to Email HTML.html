@@ -35,9 +35,6 @@
     </p>
   </div>
   <div class="content">
-    <p class="bold">
-      Report Details:
-    </p>
     <p>
       <b>Report Time:</b> @{formatDateTime(addHours(addSeconds('1970-01-01',div(int(triggerOutputs()?['body/feature/attributes/team_status_report_time']), 1000)),-4), 'MM/dd/yyyy HH:mm')} Eastern (Zulu -4)<br>
       <b>Resource:</b>  @{triggerOutputs()?['body/feature/attributes/resource_type_names']}<br>
@@ -54,10 +51,7 @@
     </p>
   </div>
   <div class="content">
-    <p class="bold">
-      Updating Your Team Fact Sheet:
-    </p>
-    <p>
+    <p><b>Updating Your Team Fact Sheet:</b><br>
       To update your status, access the existing Team Fact Sheet survey through this unique link: <a href="https://survey123.arcgis.com/share/f0c2ab27da8f49e6bf98d28926b416a0?mode=edit&amp;globalId=@{triggerOutputs()?['body/feature/result/globalId']}&amp;isOrgSignIn=false">Edit Survey</a>.
     </p>
   </div>
